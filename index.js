@@ -27,7 +27,7 @@ const joutube = new Discord.MessageEmbed()
 client.once('ready', () => {
   console.log("Bot Login.");
 });
-client.on('message', (msg) => {
+client.on('message', ( msg , message ) => {
     if(msg.channel.type === "dm" ) { 
         if (msg.content === `${prefix} ID`){
             if ((msg.author.plsstop != 0) && (!msg.author.yee)) {
@@ -49,7 +49,7 @@ client.on('message', (msg) => {
         }
     }
 });
-client.on('message', (msg) => {
+client.on('message', ( msg , message ) => {
     if (msg.channel.type === "dm") {
         msg.author.dm = true
     }
@@ -60,7 +60,7 @@ client.on('message', (msg) => {
         }
     }
 });
-client.on('message', (msg) => {
+client.on('message', ( msg , message ) => {
     const args = msg.content.split(" ");
     if (msg.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
@@ -143,9 +143,9 @@ client.on('message', (msg) => {
         msg.channel.send(`${args[1]}`);
     }
     if (msg.content === '!fruits') {
-	msg.react('🍎');
-	msg.react('🍊');
-	msg.react('🍇');
+	message.react('🍎');
+	message.react('🍊');
+	message.react('🍇');
     }
 });
 
