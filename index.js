@@ -1,4 +1,5 @@
 const { prefix } = require('./Config.json'); //prefix, token을 불러옴
+//const prefix = "++"; //prefix, token을 불러옴
 const token = process.env.token;
 const Discord = require(`discord.js`); // discord.js를 불러옴
 const client = new Discord.Client(); // 새로운 디스코드 클라이언트를 만듬
@@ -80,6 +81,27 @@ client.on('message', (msg) => {
         }
         if (msg.author.what === 5) {
             if (msg.channel.send("M자 탈모 박치기"));
+        }
+    }
+    if (msg.content === `테스트`) {
+        msg.author.test = Math.floor(Math.random() * 2) + 1;
+        if (msg.author.test === 1) {
+            if (msg.channel.send("ㅇ"));
+        }
+        if (msg.author.test === 2) {
+            if (msg.channel.send("잘 되는데?"));
+        }
+    }
+    if (msg.content === `${prefix} 반응 달아`) {
+        msg.author.reac = Math.floor(Math.random() * 2) + 1;
+        if (msg.author.reac === 1) {
+            if (msg.react('704949221605769226'));
+        }
+        if (msg.author.reac === 2) {
+            if (msg.react('712539046135463977'));
+        }
+        if (msg.author.reac === 3) {
+            if (msg.channel.send("싫은데"));
         }
     }
     if (msg.content === "0.03") {
