@@ -92,6 +92,18 @@ client.on('message', (msg) => {
             if (msg.channel.send("잘 되는데?"));
         }
     }
+    if (msg.content === `${prefix} 반응 달아`) {
+        msg.author.reac = Math.floor(Math.random() * 2) + 1;
+        if (msg.author.reac === 1) {
+            if (msg.react('704949221605769226'));
+        }
+        if (msg.author.reac === 2) {
+            if (msg.react('712539046135463977'));
+        }
+        if (msg.author.reac === 3) {
+            if (msg.channel.send("싫은데"));
+        }
+    }
     if (msg.content === "0.03") {
         msg.channel.send("안한다구요!!");       
     }
