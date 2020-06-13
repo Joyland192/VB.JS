@@ -141,6 +141,11 @@ client.on('message', (msg) => {
         //msg.channel.send(`args[0]: ${args[0]}, args[1]: ${args[1]}`);
         msg.channel.send(`${args[1]}`);
     }
+    if (message.content === '!fruits') {
+	message.react('🍎');
+	message.react('🍊');
+	message.react('🍇');
+    }
 });
 
 
