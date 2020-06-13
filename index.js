@@ -108,6 +108,9 @@ client.on('message', ( message ) => {
     if (message.content === "0.03") {
         message.channel.send("안한다구요!!");       
     }
+    if (message.content === `${prefix} 나 누구야`) {
+        message.channel.send(`너..그..어..${message.author.tag}?`);       
+    }
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
