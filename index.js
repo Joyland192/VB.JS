@@ -27,122 +27,122 @@ const joutube = new Discord.MessageEmbed()
 client.once('ready', () => {
   console.log("Bot Login.");
 });
-client.on('message', ( msg , message ) => {
-    if(msg.channel.type === "dm" ) { 
-        if (msg.content === `${prefix} ID`){
-            if ((msg.author.plsstop != 0) && (!msg.author.yee)) {
-                msg.channel.send("여기 아니야 임마...");
-                msg.channel.send(`이번만 해준다.. ${msg.author.id}`);
-                msg.author.left = 4;
-                msg.channel.send(`${msg.author.left}번만 더 해준다...`);
-                msg.author.plsstop = 1;
-                msg.author.yee = true;
-            } else if (msg.author.plsstop <= 4) {
-                msg.channel.send("여기 아니야 임마...");
-                msg.channel.send(`이번만 해준다.. ${msg.author.id}`);
-                msg.author.left = 4 - msg.author.plsstop;
-                msg.channel.send(`${msg.author.left}번만 더 해준다...`);
-                msg.author.plsstop += 1;
-            } else if (msg.author.plsstop > 4) {
-                msg.channel.send("작작해 내가 노예도 아니고 ㅠㅠ");
+client.on('message', ( message ) => {
+    if(message.channel.type === "dm" ) { 
+        if (message.content === `${prefix} ID`){
+            if ((message.author.plsstop != 0) && (!message.author.yee)) {
+                message.channel.send("여기 아니야 임마...");
+                message.channel.send(`이번만 해준다.. ${message.author.id}`);
+                message.author.left = 4;
+                message.channel.send(`${message.author.left}번만 더 해준다...`);
+                message.author.plsstop = 1;
+                message.author.yee = true;
+            } else if (message.author.plsstop <= 4) {
+                message.channel.send("여기 아니야 임마...");
+                message.channel.send(`이번만 해준다.. ${message.author.id}`);
+                message.author.left = 4 - message.author.plsstop;
+                message.channel.send(`${message.author.left}번만 더 해준다...`);
+                message.author.plsstop += 1;
+            } else if (message.author.plsstop > 4) {
+                message.channel.send("작작해 내가 노예도 아니고 ㅠㅠ");
             }
         }
     }
 });
-client.on('message', ( msg , message ) => {
-    if (msg.channel.type === "dm") {
-        msg.author.dm = true
+client.on('message', ( message ) => {
+    if (message.channel.type === "dm") {
+        message.author.dm = true
     }
-    if(!msg.author.dm) {
-        const args = msg.content.split(" ");
-        if (msg.content === `${prefix} ID`) {
-            msg.channel.send(`${msg.author.id}`);
+    if(!message.author.dm) {
+        const args = message.content.split(" ");
+        if (message.content === `${prefix} ID`) {
+            message.channel.send(`${message.author.id}`);
         }
     }
 });
-client.on('message', ( msg , message ) => {
-    const args = msg.content.split(" ");
-    if (msg.content === "0.02" ) {
+client.on('message', ( message ) => {
+    const args = message.content.split(" ");
+    if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
-        msg.channel.send("안한다구요!!");
+        message.channel.send("안한다구요!!");
     }
-    if (msg.content === `${prefix} 뭐해`) {
-        msg.author.what = Math.floor(Math.random() * 5) + 1;
-        if (msg.author.what === 1) {
-            msg.channel.send("몰라");
+    if (message.content === `${prefix} 뭐해`) {
+        message.author.what = Math.floor(Math.random() * 5) + 1;
+        if (message.author.what === 1) {
+            message.channel.send("몰라");
         }
-        if (msg.author.what === 2) {
-            msg.channel.send("잠");
+        if (message.author.what === 2) {
+            message.channel.send("잠");
         }
-        if (msg.author.what === 3) {
-            msg.channel.send("마인크래프트 하는데");
+        if (message.author.what === 3) {
+            message.channel.send("마인크래프트 하는데");
         }
-        if (msg.author.what === 4) {
-            msg.channel.send("ㅇ?");
+        if (message.author.what === 4) {
+            message.channel.send("ㅇ?");
         }
-        if (msg.author.what === 5) {
-            msg.channel.send("M자 탈모 박치기");
-        }
-    }
-    if (msg.content === `테스트`) {
-        msg.author.test = Math.floor(Math.random() * 2) + 1;
-        if (msg.author.test === 1) {
-            msg.channel.send("ㅇ");
-        }
-        if (msg.author.test === 2) {
-            msg.channel.send("잘 되는데?");
+        if (message.author.what === 5) {
+            message.channel.send("M자 탈모 박치기");
         }
     }
-    if (msg.content === `${prefix} 반응 달아`) {
-        msg.author.reac = Math.floor(Math.random() * 3) + 1;
-        if (msg.author.reac === 1) {
-            msg.react('704949221605769226');
+    if (message.content === `테스트`) {
+        message.author.test = Math.floor(Math.random() * 2) + 1;
+        if (message.author.test === 1) {
+            message.channel.send("ㅇ");
         }
-        if (msg.author.reac === 2) {
-            msg.react('712539046135463977');
-        }
-        if (msg.author.reac === 3) {
-            msg.channel.send("싫은데");
+        if (message.author.test === 2) {
+            message.channel.send("잘 되는데?");
         }
     }
-    if (msg.content === "0.03") {
-        msg.channel.send("안한다구요!!");       
+    if (message.content === `${prefix} 반응 달아`) {
+        message.author.reac = Math.floor(Math.random() * 3) + 1;
+        if (message.author.reac === 1) {
+            message.react('704949221605769226');
+        }
+        if (message.author.reac === 2) {
+            message.react('712539046135463977');
+        }
+        if (message.author.reac === 3) {
+            message.channel.send("싫은데");
+        }
     }
-    if (msg.content === `${prefix} 유튜브`) {
-        msg.channel.send(joutube);       
+    if (message.content === "0.03") {
+        message.channel.send("안한다구요!!");       
     }
-    if (msg.content === `시발`) {
-        msg.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
+    if (message.content === `${prefix} 유튜브`) {
+        message.channel.send(joutube);       
     }
-    if (msg.content === `ㅅㅂ`) {
-        msg.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
+    if (message.content === `시발`) {
+        message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
     }
-    if (msg.content === `시벌`) {
-        msg.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
+    if (message.content === `ㅅㅂ`) {
+        message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
     }
-    if (msg.content === `${prefix} 재배맨!`) {
-        msg.channel.send(`무 무슨`);
-        msg.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
+    if (message.content === `시벌`) {
+        message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/708522939431125033/SIVpzVG.jpg`);
     }
-    if (msg.content === `${prefix} 재배맨`) {
-        msg.channel.send(`무 무슨`);
-        msg.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
+    if (message.content === `${prefix} 재배맨!`) {
+        message.channel.send(`무 무슨`);
+        message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
     }
-    if (msg.content === `${prefix} 강작가`) {
-        msg.channel.send(`밥오`);
+    if (message.content === `${prefix} 재배맨`) {
+        message.channel.send(`무 무슨`);
+        message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
+    }
+    if (message.content === `${prefix} 강작가`) {
+        message.channel.send(`밥오`);
     }
     if (args[0] === `${prefix}문자열테스트`) {
-        msg.channel.send(`(문자열 1:) ${args[1]} (문자열 2:) ${args[2]} (문자열 3:) ${args[3]}`);
+        message.channel.send(`(문자열 1:) ${args[1]} (문자열 2:) ${args[2]} (문자열 3:) ${args[3]}`);
     }
     if ((args[0] === `${prefix}`) && (args[1] === `랜덤`)) {
-        msg.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
-        msg.channel.send (msg.author.randomvar);
+        message.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
+        message.channel.send (message.author.randomvar);
     }
     if (args[0] === `${prefix}말해`) {
-        //msg.channel.send(`args[0]: ${args[0]}, args[1]: ${args[1]}`);
-        msg.channel.send(`${args[1]}`);
+        //message.channel.send(`args[0]: ${args[0]}, args[1]: ${args[1]}`);
+        message.channel.send(`${args[1]}`);
     }
-    if (msg.content === '!fruits') {
+    if (message.content === '!fruits') {
 	message.react('🍎');
 	message.react('🍊');
 	message.react('🍇');
