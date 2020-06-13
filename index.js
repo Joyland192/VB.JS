@@ -83,6 +83,15 @@ client.on('message', (msg) => {
             if (msg.channel.send("M자 탈모 박치기"));
         }
     }
+    if (msg.content === `테스트`) {
+        msg.author.test = Math.floor(Math.random() * 5) + 1;
+        if (msg.author.test === 1) {
+            if (msg.channel.send("ㅇ"));
+        }
+        if (msg.author.test === 2) {
+            if (msg.channel.send("잘 되는데?"));
+        }
+    }
     if (msg.content === "0.03") {
         msg.channel.send("안한다구요!!");       
     }
