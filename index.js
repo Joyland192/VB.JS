@@ -60,7 +60,7 @@ client.on('message', ( message ) => {
         }
     }
 });
-client.on('message', ( message ) => {
+client.on('message', (message) => {
     const args = message.content.split(" ");
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
