@@ -68,40 +68,40 @@ client.on('message', (msg) => {
     if (msg.content === `${prefix} 뭐해`) {
         msg.author.what = Math.floor(Math.random() * 5) + 1;
         if (msg.author.what === 1) {
-            if (msg.channel.send("몰라"));
+            msg.channel.send("몰라");
         }
         if (msg.author.what === 2) {
-            if (msg.channel.send("잠"));
+            msg.channel.send("잠");
         }
         if (msg.author.what === 3) {
-            if (msg.channel.send("마인크래프트 하는데"));
+            msg.channel.send("마인크래프트 하는데");
         }
         if (msg.author.what === 4) {
-            if (msg.channel.send("ㅇ?"));
+            msg.channel.send("ㅇ?");
         }
         if (msg.author.what === 5) {
-            if (msg.channel.send("M자 탈모 박치기"));
+            msg.channel.send("M자 탈모 박치기");
         }
     }
     if (msg.content === `테스트`) {
-        msg.author.test = Math.floor(Math.random() * 5) + 1;
+        msg.author.test = Math.floor(Math.random() * 2) + 1;
         if (msg.author.test === 1) {
-            if (msg.channel.send("ㅇ"));
+            msg.channel.send("ㅇ");
         }
         if (msg.author.test === 2) {
-            if (msg.channel.send("잘 되는데?"));
+            msg.channel.send("잘 되는데?");
         }
     }
     if (msg.content === `${prefix} 반응 달아`) {
-        msg.author.reac = Math.floor(Math.random() * 2) + 1;
+        msg.author.reac = Math.floor(Math.random() * 3) + 1;
         if (msg.author.reac === 1) {
-            if (msg.react('704949221605769226'));
+            msg.react('704949221605769226');
         }
         if (msg.author.reac === 2) {
-            if (msg.react('712539046135463977'));
+            msg.react('712539046135463977');
         }
         if (msg.author.reac === 3) {
-            if (msg.channel.send("싫은데"));
+            msg.channel.send("싫은데");
         }
     }
     if (msg.content === "0.03") {
