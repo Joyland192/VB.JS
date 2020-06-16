@@ -109,7 +109,7 @@ client.on('message', (message) => {
         message.channel.send("안한다구요!!");       
     }
     if (message.content === `${prefix} 나 누구야`) {
-        message.channel.send(`너..그..어..${message.author.tag}?`);       
+        message.channel.send(`너..그..어.. ${message.author.tag} ?`);       
     }
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
@@ -140,6 +140,9 @@ client.on('message', (message) => {
     if ((args[0] === `${prefix}`) && (args[1] === `랜덤`)) {
         message.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
         message.channel.send (message.author.randomvar);
+    }
+    if (message.content === `${prefix} 바보`) {
+        message.author.addRole(guild.roles.find(role => role.name == "바보"));
     }
     if (args[0] === `${prefix}말해`) {
         //message.channel.send(`args[0]: ${args[0]}, args[1]: ${args[1]}`);
