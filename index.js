@@ -153,7 +153,7 @@ client.on('message', (message) => {
 	message.react('🍊');
 	message.react('🍇');
     }
-    if(args[0] === `${prefix} 전체공지`) {
+    if(args[0] === `${prefix}전체공지`) {
       if(checkPermission(message)) return
       if(message.member != null) { // 채널에서 공지 쓸 때
         message.author.contents = args[1];
