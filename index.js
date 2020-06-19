@@ -5,7 +5,7 @@ const Discord = require(`discord.js`); // discord.js를 불러옴
 const client = new Discord.Client(); // 새로운 디스코드 클라이언트를 만듬
 // 만약에 클라이언트가 준비되었다면, 아래의코드를 실행합니다
 // 이 이벤트는 봇이 로그인 되고 한번만 실행될것입니다
-//커밋 완료
+//커밋 완료2
 const joutube = new Discord.MessageEmbed()
 	.setColor('#FF9900')
 	.setTitle('조이 유튜브 채널 가기')
@@ -109,7 +109,7 @@ client.on('message', (message) => {
         message.channel.send("안한다구요!!");       
     }
     if (message.content === `${prefix} 나 누구야`) {
-        message.channel.send(`너..그..어.. ${message.author.tag} ?`);       
+        message.channel.send(`너..그..어.. ${message.author.name} ?`);       
     }
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
@@ -154,13 +154,6 @@ client.on('message', (message) => {
 	message.react('🍇');
     }
 });
-client.on('message', (message) => {
-    if(message.author.bot) return;
-  
-    if(message.content == 'ping') {
-      return message.reply('pong');
-    }
-  });
 
 
 
