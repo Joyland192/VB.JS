@@ -135,20 +135,22 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
-    if (message.content.startsWith (`ㅅㅂ`)) {
-        message.delete();
-    }
-    if (message.content.startsWith (`시발`)) {
-        message.delete();
-    }
-    if (message.content.startsWith (`씨발`)) {
-        message.delete();
-    }
-    if (message.content.startsWith (`ㅆㅂ`)) {
-        message.delete();
-    }
-    if (message.content.startsWith (`시벌`)) {
-        message.delete();
+    if (message.channel.id === '541904100607131658') {
+        if (message.content.startsWith (`ㅅㅂ`)) {
+            message.delete();
+        }
+        if (message.content.startsWith (`시발`)) {
+            message.delete();
+        }
+        if (message.content.startsWith (`씨발`)) {
+            message.delete();
+        }
+        if (message.content.startsWith (`ㅆㅂ`)) {
+            message.delete();
+        }
+        if (message.content.startsWith (`시벌`)) {
+            message.delete();
+        }
     }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
