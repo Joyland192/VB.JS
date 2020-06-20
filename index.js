@@ -112,14 +112,20 @@ client.on('message', (message) => {
         message.channel.send("갠찮아");       
     }
     if (message.content === `${prefix} 지워`) {
-        message.author.what = Math.floor(Math.random() * 3) + 1;
-        if (message.author.what === 1) {
+        message.author.plsdel = Math.floor(Math.random() * 5) + 1;
+        if (message.author.plsdel === 1) {
             message.channel.send("시러");
         }
-        if (message.author.what === 2) {
-            message.channel.send("시러");
+        if (message.author.plsdel === 2) {
+            message.delete();
         }
-        if (message.author.what === 3) {
+        if (message.author.plsdel === 3) {
+            message.delete();
+        }
+        if (message.author.plsdel === 4) {
+            message.delete();
+        }
+        if (message.author.plsdel === 5) {
             message.delete();
         }
     }
