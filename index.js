@@ -196,7 +196,7 @@ client.on('message', (message) => {
         message.channel.send(`왜 불러`);
     }
     if (message.content === `${prefix} 프사`) {
-        message.channel.send(`${message.author.avatarURL} 여기`);
+        message.channel.send(message.author.avatarURL);
     }
     if (message.content === `${prefix} 강작가`) {
         message.channel.send(`밥오`);
