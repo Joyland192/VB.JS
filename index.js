@@ -152,6 +152,21 @@ client.on('message', (message) => {
             message.delete();
         }
     }
+    if (message.content.startsWith (`ㅅㅂ`)) {
+        message.channel.send('욕은 나빠 >:(');
+    }
+    if (message.content.startsWith (`시발`)) {
+        message.channel.send('욕은 나빠 >:(');
+    }
+    if (message.content.startsWith (`씨발`)) {
+        message.channel.send('욕은 나빠 >:(');
+    }
+    if (message.content.startsWith (`ㅆㅂ`)) {
+        message.channel.send('욕은 나빠 >:(');
+    }
+    if (message.content.startsWith (`시벌`)) {
+        message.channel.send('욕은 나빠 >:(');
+    }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
         message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
