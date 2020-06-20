@@ -202,19 +202,27 @@ client.on('message', (message) => {
         message.channel.send(`(문자열 1:) ${args[1]} (문자열 2:) ${args[2]} (문자열 3:) ${args[3]}`);
     }
     if (message.content === `${prefix} 순서 1`) {
-        const qna = 'JL';
-        message.channel.send(`JL의 턴입니다.`)
+        message.author.qna = 1;
+        message.channel.send(`JL의 턴입니다.`);
     }
     if (message.content === `${prefix} 순서 2`) {
-        const qna = 'V';
-        message.channel.send(`V의 턴입니다.`)
+        message.author.qna = 2;
+        message.channel.send(`V의 턴입니다.`);
     }
     if (message.content === `${prefix} 순서 3`) {
-        const qna = 'AR';
-        message.channel.send(`AR의 턴입니다.`)
+        message.author.qna = 3;
+        message.channel.send(`AR의 턴입니다.`);
     }
     if (message.content === `${prefix} 순서 `) {
-        message.channel.send(`${qna} 의 턴입니다.`);
+        if (message.author.qna = 1) {
+            message.channel.send(`JL의 턴입니다.`);
+        }
+        if (message.author.qna = 2) {
+            message.channel.send(`V의 턴입니다.`);
+        }
+        if (message.author.qna = 3) {
+            message.channel.send(`AR의 턴입니다.`);
+        }
     }
     if ((args[0] === `${prefix}`) && (args[1] === `랜덤`)) {
         message.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
