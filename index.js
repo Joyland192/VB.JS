@@ -108,6 +108,21 @@ client.on('message', (message) => {
     if (message.content === "0.03") {
         message.channel.send("안한다구요!!");       
     }
+    if (message.content === "몸 어때") {
+        message.channel.send("갠찮아");       
+    }
+    if (message.content === `${prefix} 지워`) {
+        message.author.what = Math.floor(Math.random() * 3) + 1;
+        if (message.author.what === 1) {
+            message.channel.send("시러");
+        }
+        if (message.author.what === 2) {
+            message.channel.send("시러");
+        }
+        if (message.author.what === 3) {
+            message.delete();
+        }
+    }
     if (message.content === `${prefix} 나 누구야`) {
         message.channel.send(`너..그..어.. ${message.author.name} ?`);       
     }
