@@ -195,14 +195,26 @@ client.on('message', (message) => {
         message.channel.send(`으악 핑`);
         message.channel.send(`왜 불러`);
     }
-    if (message.content === `${prefix} 프사`) {
-        message.channel.send(message.author.avatar);
-    }
     if (message.content === `${prefix} 강작가`) {
         message.channel.send(`밥오`);
     }
     if (args[0] === `${prefix}문자열테스트`) {
         message.channel.send(`(문자열 1:) ${args[1]} (문자열 2:) ${args[2]} (문자열 3:) ${args[3]}`);
+    }
+    if (message.content === `${prefix} 순서 1`) {
+        message.author.qna = 'JL';
+        message.channel.send(`JL의 턴입니다.`)
+    }
+    if (message.content === `${prefix} 순서 2`) {
+        message.author.qna = 'V';
+        message.channel.send(`V의 턴입니다.`)
+    }
+    if (message.content === `${prefix} 순서 3`) {
+        message.author.qna = 'AR';
+        message.channel.send(`AR의 턴입니다.`)
+    }
+    if (message.content === `${prefix} 순서 `) {
+        message.channel.send (`${message.author.qna} 의 턴입니다.`);
     }
     if ((args[0] === `${prefix}`) && (args[1] === `랜덤`)) {
         message.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
