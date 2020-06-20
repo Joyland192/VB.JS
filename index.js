@@ -152,6 +152,10 @@ client.on('message', (message) => {
             message.delete();
         }
     }
+    if (message.content === `${prefix} 여기 어디야`) {
+        message.channel.send(`여기 거긴데 그..`)
+        message.channel.send(`**${message.guild.name}**`)
+    }
     if (message.content.startsWith (`ㅅㅂ`)) {
         message.channel.send('욕은 나빠 >:(');
     }
