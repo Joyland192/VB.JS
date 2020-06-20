@@ -214,7 +214,7 @@ client.on('message', (message) => {
         message.channel.send(`AR의 턴입니다.`)
     }
     if (message.content === `${prefix} 순서 `) {
-        message.channel.send (`${qna} 의 턴입니다.`);
+        message.channel.send(`${qna} 의 턴입니다.`);
     }
     if ((args[0] === `${prefix}`) && (args[1] === `랜덤`)) {
         message.author.randomvar = Math.floor(Math.random() * args[3] + args[2])
