@@ -131,6 +131,10 @@ client.on('message', (message) => {
         message.channel.send(`무 무슨`);
         message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
     }
+    if (message.content === `<@556660274380406805>`) {
+        message.channel.send(`으악 핑`);
+        message.channel.send(`왜 불러`);
+    }
     if (message.content === `${prefix} 강작가`) {
         message.channel.send(`밥오`);
     }
