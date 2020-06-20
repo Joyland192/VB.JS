@@ -171,6 +171,18 @@ client.on('message', (message) => {
     if (message.content.startsWith (`시벌`)) {
         message.channel.send('욕은 나빠 >:(');
     }
+    if (message.content.startsWith (`수버 등장`)) {
+        message.author.surber = Math.floor(Math.random() * 3) + 1;
+        if (message.author.surber === 1) {
+            message.channel.send('스윽');
+        }
+        if (message.author.surber === 2) {
+            message.channel.send('쾅');
+        }
+        if (message.author.surber === 3) {
+            message.channel.send('펑');
+        }
+    }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
         message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
