@@ -6,10 +6,9 @@ const client = new Discord.Client(); // 새로운 디스코드 클라이언트�
 const fs = require('fs');
 let save;
 // 저장
-//fs.writeFileSync("파일 경로", JSON.stringify(/* 님이 사용하고 저장한 오브젝트 */ save));
-
+//fs.writeFileSync("C:\Users\JoyLand192\PycharmProjects\깁치봇\venv\VB.JS\Exp.json", JSON.stringify(save));
 // 불러오기
-//save = JSON.parse(fs.readFileSync("파일 경로"));
+//save = JSON.parse(fs.readFileSync("C:\Users\JoyLand192\PycharmProjects\깁치봇\venv\VB.JS\Exp.json"));
 // 만약에 클라이언트가 준비되었다면, 아래의코드를 실행합니다
 // 이 이벤트는 봇이 로그인 되고 한번만 실행될것입니다
 //커밋 완료3
