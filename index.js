@@ -173,7 +173,7 @@ client.on('message', (message) => {
         }
     }
     if (message.content === `${prefix} 경험치`) {
-        message.channel.send(`당신의 보유 경험치는 ${message.author.exp} 입니다.`);       
+        message.channel.send(`당신의 보유 경험치는 ${message.author.exp}/${message.author.maxexp} 입니다.`);       
     }
     if (message.content === `${prefix} 레벨`) {
         message.channel.send(`당신의 레벨은 ${message.author.level}Lv 입니다.`);       
