@@ -31,6 +31,8 @@ const joutube = new Discord.MessageEmbed()
 //임베드 함수 생성
 client.once('ready', () => {
   console.log("Bot Login.");
+  const loginlog = client.channels.cache.get('724231205570215946');
+  loginlog.send(`봇 로그인.`);
 });
 client.on('message', ( message ) => {
     if(message.channel.type === "dm" ) { 
