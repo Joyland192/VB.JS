@@ -62,6 +62,7 @@ client.on('message', ( message ) => {
 });
 client.on('message', (message) => {
     const args = message.content.split(" ");
+    const blueholdcn = client.channels.cache.get('721252326249070652');
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
@@ -83,6 +84,9 @@ client.on('message', (message) => {
         if (message.author.what === 5) {
             message.channel.send("M자 탈모 박치기");
         }
+    }
+    if ((args[0] === `${prefix}`) && (args[1] === `블홀공지`)) {
+        blueholdcn.send(`${args[2]}`);
     }
     if (message.content === `테스트`) {
         message.author.test = Math.floor(Math.random() * 2) + 1;
