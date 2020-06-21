@@ -168,7 +168,8 @@ client.on('message', (message) => {
         message.author.exp += 20;
         if(message.author.exp >= message.author.maxexp) {
             message.author.exp -= message.author.maxexp;
-            message.level++;
+            message.author.level++;
+            message.channel.send("축하합니다! 레벨업 하셨습니다!");
         }
     }
     if (message.content === `${prefix} 경험치`) {
