@@ -305,9 +305,9 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 바보`) {
         message.author.addRole(guild.roles.find(role => role.name == "바보"));
     }
-    if (args[0] === `${prefix}말해`) {
-        //message.channel.send(`args[0]: ${args[0]}, args[1]: ${args[1]}`);
-        message.channel.send(`${args[1]}`);
+    if(message.content.startsWith(`${prefix} 말해`)) {
+        let saypls = message.content.slice(`${prefix} 말해`.length);
+        message.channel.send(saypls);
     }
     if (message.content === '!fruits') {
 	message.react('🍎');
