@@ -109,9 +109,10 @@ client.on('message', (message) => {
     //    reinforcejd.send(`${args[2]}`);
     //}
     if(message.content.startsWith(`${prefix} 렌포잡담`)) {
+        let byauthor = message.author.name;
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
-        reinforcejd.send(`..라고 ${message.author.name} (이)가 말하더라`)
+        reinforcejd.send(`..라고 ${byauthor} (이)가 말하더라`)
         message.reply('메시지를 전송했습니다.');
     }
     if (message.content === `테스트`) {
