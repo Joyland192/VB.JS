@@ -171,6 +171,9 @@ client.on('message', (message) => {
     if (message.content.startsWith (`시벌`)) {
         message.channel.send('욕은 나빠 >:(');
     }
+    if (message.content.startsWith (`소환`)) {
+        message.react('🤔');
+    }
     if (message.content.startsWith (`수버 등장`)) {
         message.author.surber = Math.floor(Math.random() * 3) + 1;
         if (message.author.surber === 1) {
