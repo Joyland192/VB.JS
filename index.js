@@ -63,6 +63,7 @@ client.on('message', ( message ) => {
 client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
+    const reinforcejd = client.channels.cache.get('541904100607131658');
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
@@ -87,6 +88,9 @@ client.on('message', (message) => {
     }
     if ((args[0] === `${prefix}`) && (args[1] === `블홀공지`)) {
         blueholdcn.send(`${args[2]}`);
+    }
+    if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
+        reinforcejd.send(`${args[2]}`);
     }
     if (message.content === `테스트`) {
         message.author.test = Math.floor(Math.random() * 2) + 1;
@@ -145,6 +149,9 @@ client.on('message', (message) => {
     if ((args[0] === `${prefix}`) && (args[1] === `닉네임`)) {
         client.user.setUsername(`${args[2]}`);
         message.channel.send(`닉네임을 ${args[2]} 으로 설정 했어.`);
+        if (args[2] === `${client.user.username}`) {
+            message.channel.send(`원래 이거였는데?`)
+        }
         if (args[2] === `바보`) {
             message.channel.send(`..디질래?`);
         }
