@@ -174,10 +174,10 @@ client.on('message', (message) => {
     if ((args[0] === `${prefix}`) && (args[1] === `닉네임`)) {
         client.user.setUsername(`${args[2]}`);
         message.channel.send(`닉네임을 ${args[2]} 으로 설정 했어.`);
-        if (args[2] === `${client.user.username}`) {
+        if (args[2] == `${client.user.username}`) {
             message.channel.send(`원래 이거였는데?`)
         }
-        if (args[2] === `바보`) {
+        if (args[2] == `바보`) {
             message.channel.send(`..디질래?`);
         }
     }
