@@ -64,6 +64,7 @@ client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
+    const cijanms = client.message.cache.get('724099691305894029');
     const plshelp = new Discord.MessageEmbed()
 	.setColor('#FF9900')
 	.setTitle('도움말')
@@ -237,6 +238,9 @@ client.on('message', (message) => {
     }
     if (message.content === `${prefix} 평가`) {
         message.react('👍').then(() => message.react('👎'));
+    }
+    if (message.content === `야 반응좀 제발`) {
+        cijanms.react('👍');
     }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
