@@ -4,7 +4,6 @@ const token = process.env.token;
 const Discord = require(`discord.js`); // discord.js를 불러옴
 const client = new Discord.Client(); // 새로운 디스코드 클라이언트를 만듬
 const fs = require('fs');
-let save;
 // 저장
 //fs.writeFileSync("C:\Users\JoyLand192\PycharmProjects\깁치봇\venv\VB.JS\Exp.json", JSON.stringify(save));
 // 불러오기
@@ -157,6 +156,17 @@ client.on('message', (message) => {
     }
     if (message.content === `${prefix} 나 누구야`) {
         message.channel.send(`너..그..어.. ${message.author.name} ?`);       
+    }
+    if (message.content === `${prefix} 경험치 설정`) {
+        message.channel.send(`경험치를 0으로 설정했습니다.`);   
+        message.author.exp = 0;
+    }
+    if (message.content === `${prefix} 경험치 올리기`) {
+        message.channel.send(`경험치를 20만큼 올립니다.`);   
+        message.author.exp += 20;
+    }
+    if (message.content === `${prefix} 경험치`) {
+        message.channel.send(`당신의 보유 경험치는 ${message.author.exp} 입니다.`);       
     }
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
