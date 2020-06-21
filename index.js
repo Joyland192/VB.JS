@@ -69,6 +69,7 @@ client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
+    message.author.maxexp = message.author.level*300;
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
@@ -160,13 +161,21 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 경험치 설정`) {
         message.channel.send(`경험치를 0으로 설정했습니다.`);   
         message.author.exp = 0;
+        message.author.level = 1;
     }
     if (message.content === `${prefix} 경험치 올리기`) {
         message.channel.send(`경험치를 20만큼 올립니다.`);   
         message.author.exp += 20;
+        if(message.author.exp >= message.author.maxexp) {
+            message.author.exp -= message.author.maxexp;
+            message.level++;
+        }
     }
     if (message.content === `${prefix} 경험치`) {
         message.channel.send(`당신의 보유 경험치는 ${message.author.exp} 입니다.`);       
+    }
+    if (message.content === `${prefix} 레벨`) {
+        message.channel.send(`당신의 레벨은 ${message.author.level}Lv 입니다.`);       
     }
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
