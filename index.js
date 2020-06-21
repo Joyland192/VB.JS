@@ -226,7 +226,7 @@ client.on('message', (message) => {
         message.channel.send(`야 ${message.author.tag}.. 왜 울고있는거야..?`).then(() => message.channel.send ('..소난다..'));
     }
     if (message.content === `${prefix} 평가`) {
-        message.react('👍').then(() => message.react('👎'));
+        message.react('👍').then(() => message.react('👎').then(() => message.channel.send(`VB의 기능에 대해 평가해주세요.`)));
     }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
