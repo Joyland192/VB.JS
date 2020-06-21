@@ -76,6 +76,12 @@ client.on('message', (message) => {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
     }
+    if (message.content === `${prefix} 블홀`) {
+        const bluehold = "바보";
+    }
+    if (message.content === `${prefix} 블홀은 바보입니까?`) {
+        (bluehold = "바보") ? message.channel.send('내') : message.channel.send('ㄴ');
+    }
     if (message.content === `${prefix} 뭐해`) {
         message.author.what = Math.floor(Math.random() * 5) + 1;
         if (message.author.what === 1) {
