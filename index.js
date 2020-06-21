@@ -173,8 +173,8 @@ client.on('message', (message) => {
         message.author.level = 1;
     }
     if (message.content === `${prefix} 경험치 올리기`) {
-        message.channel.send(`경험치를 20만큼 올립니다.`);   
-        message.author.exp += 20;
+        message.channel.send(`경험치를 100만큼 올립니다.`);   
+        message.author.exp += 100;
     }
     if(message.author.exp >= message.author.maxexp) {
         message.author.exp -= message.author.maxexp;
@@ -314,7 +314,7 @@ client.on('message', (message) => {
 	message.react('🍊');
 	message.react('🍇');
     }
-    message.author.exp += 5;
+    message.author.exp += 20;
 });
 
 
