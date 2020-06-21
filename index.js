@@ -3,6 +3,13 @@ const { prefix } = require('./Config.json'); //prefix, token을 불러옴
 const token = process.env.token;
 const Discord = require(`discord.js`); // discord.js를 불러옴
 const client = new Discord.Client(); // 새로운 디스코드 클라이언트를 만듬
+const fs = require('fs');
+let save;
+// 저장
+//fs.writeFileSync("파일 경로", JSON.stringify(/* 님이 사용하고 저장한 오브젝트 */ save));
+
+// 불러오기
+//save = JSON.parse(fs.readFileSync("파일 경로"));
 // 만약에 클라이언트가 준비되었다면, 아래의코드를 실행합니다
 // 이 이벤트는 봇이 로그인 되고 한번만 실행될것입니다
 //커밋 완료3
@@ -64,23 +71,6 @@ client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
-    const cijanms = client.message.cache.get('724099691305894029');
-    const plshelp = new Discord.MessageEmbed()
-	.setColor('#FF9900')
-	.setTitle('도움말')
-	.setAuthor('조이', 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png')
-	.setDescription('안뇽')
-	.setThumbnail('https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png')
-	.addFields(
-		{ name: 'Regular field title', value: 'Some value here' },
-		{ name: '\u200B', value: '\u200B' },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
-		{ name: 'Inline field title', value: 'Some value here', inline: true },
-	)
-	//.addField('Inline field title', 'Some value here', true)
-	//.setImage('https://i.imgur.com/wSTFkRM.png')
-	.setTimestamp()
-    .setFooter(`VB`, 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png');
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
@@ -238,9 +228,6 @@ client.on('message', (message) => {
     }
     if (message.content === `${prefix} 평가`) {
         message.react('👍').then(() => message.react('👎'));
-    }
-    if (message.content === `야 반응좀 제발`) {
-        cijanms.react('👍');
     }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
