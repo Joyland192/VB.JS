@@ -64,6 +64,22 @@ client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
+    const plshelp = new Discord.MessageEmbed()
+	.setColor('#FF9900')
+	.setTitle('도움말')
+	.setAuthor('조이', 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png')
+	.setDescription('안뇽')
+	.setThumbnail('https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png')
+	.addFields(
+		{ name: 'Regular field title', value: 'Some value here' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+	)
+	//.addField('Inline field title', 'Some value here', true)
+	//.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTimestamp()
+    .setFooter(`VB`, 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png');
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
         message.channel.send("안한다구요!!");
@@ -89,8 +105,14 @@ client.on('message', (message) => {
     if ((args[0] === `${prefix}`) && (args[1] === `블홀공지`)) {
         blueholdcn.send(`${args[2]}`);
     }
-    if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
-        reinforcejd.send(`${args[2]}`);
+    //if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
+    //    reinforcejd.send(`${args[2]}`);
+    //}
+    if(message.content.startsWith(`${prefix} 렌포잡담`)) {
+        let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
+        reinforcejd.send(rfjd);
+        reinforcejd.send(`..라고 ${message.author.name} (이)가 말하더라`)
+        message.reply('메시지를 전송했습니다.');
     }
     if (message.content === `테스트`) {
         message.author.test = Math.floor(Math.random() * 2) + 1;
