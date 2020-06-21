@@ -223,7 +223,7 @@ client.on('message', (message) => {
         }
     }
     if (message.content === `${prefix} 꿀벌`) {
-        message.content.send(`야 ${message.author.tag}.. 왜 울고있는거야..?`).then(() => message.channel.send ('..소난다..'));
+        message.content.send(`야 ${message.author.tag}.. 왜 울고있는거야..?`);
     }
     if (message.content === `${prefix} 평가`) {
         message.react('👍').then(() => message.react('👎'));
