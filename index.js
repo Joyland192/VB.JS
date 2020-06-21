@@ -189,6 +189,9 @@ client.on('message', (message) => {
             message.channel.send('펑');
         }
     }
+    if (message.content === `${prefix} 평가`) {
+        message.react('👍').then(() => message.react('👎'));
+    }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
         message.channel.send(`https://cdn.discordapp.com/attachments/541904100607131658/707165754541342780/d0c8d91c15525df7.jpg`)
@@ -316,7 +319,6 @@ client.on("guildMemberAdd", (member) => {
       return false;
     }
   }
-  message.react('👍').then(() => message.react('👎'));
 
   const filter = (reaction, user) => {
       return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
@@ -339,6 +341,6 @@ client.on("guildMemberAdd", (member) => {
 
 
 
-      
+
 client.login(token);
 // 여러분의 디스코드 토큰으로 디스코드에 로그인합니다
