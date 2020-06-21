@@ -313,5 +313,27 @@ client.on("guildMemberAdd", (member) => {
       return false;
     }
   }
+  client.on('message', message => {
+    if (message.content.startsWith('.suggestion')) {
+  
+          const channel = message.guild.channels.find('name', 'polls');
+          const args = message.content.slice(12).trim().split(/ +/g);
+          let suggestion = args.slice(0).join(" ");
+          if (!channel) return;
+  
+          let embed = new Discord.RichEmbed()
+          .setColor("#55FFFF")
+          .setDescription('▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n▬▬▬▬▬▬▬▬▬**«    Vexil Player Suggestion    »**▬▬▬▬▬▬▬▬▬▬\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n**Suggested By »** ' + message.author + '\n\n**Suggestion »** ' + suggestion + '\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n▬▬▬▬▬▬▬▬▬▬▬▬**«**     @everyone     **»**▬▬▬▬▬▬▬▬▬▬▬▬\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬')
+          .setFooter('Vexil', client.user.avatarURL)
+  
+      channel.send(embed);
+      message.react("👍")
+      message.react("👎");
+  
+    }
+  });
+
+
+  
 client.login(token);
 // 여러분의 디스코드 토큰으로 디스코드에 로그인합니다
