@@ -71,6 +71,7 @@ client.on('message', (message) => {
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
+    const namutest = client.channels.cachr.get('697389133361971315');
     message.author.maxexp = message.author.level*300;
     if (message.content === "0.02" ) {
         // "Pong"으로 되돌려 칩니다.
@@ -98,6 +99,12 @@ client.on('message', (message) => {
         let bhkj = message.content.slice(`${prefix} 블홀공지`.length);
         blueholdcn.send(bhkj);
         blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+        message.reply('메시지를 전송했습니다.');
+    }
+    if(message.content.startsWith(`${prefix} 나무채팅`)) {
+        let nmtt = message.content.slice(`${prefix} 나무채팅`.length);
+        namutest.send(nmtt);
+        namutest.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     //if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
