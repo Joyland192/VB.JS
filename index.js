@@ -138,6 +138,9 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
+    if ((args[0] === `${prefix}`) && (args[1] === `닉네임`)) {
+        client.user.setUsername(`${args[2]}`);
+    }
     if (message.channel.id === '541904100607131658') {
         if (message.content.startsWith (`ㅅㅂ`)) {
             message.delete();
