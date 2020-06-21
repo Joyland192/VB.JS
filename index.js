@@ -108,6 +108,9 @@ client.on('message', (message) => {
     if (message.content === "0.03") {
         message.channel.send("안한다구요!!");       
     }
+    if (message.content === "띵킹") {
+        message.react('🤔');
+    }
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
     }
@@ -334,6 +337,6 @@ client.on("guildMemberAdd", (member) => {
   });
 
 
-  
+
 client.login(token);
 // 여러분의 디스코드 토큰으로 디스코드에 로그인합니다
