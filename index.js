@@ -109,7 +109,7 @@ client.on('message', (message) => {
     //    reinforcejd.send(`${args[2]}`);
     //}
     if(message.content.startsWith(`${prefix} 렌포잡담`)) {
-        let byauthor = message.author.name;
+        let byauthor = message.author.tag;
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
         reinforcejd.send(`..라고 ${byauthor} (이)가 말하더라`)
