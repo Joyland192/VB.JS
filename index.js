@@ -102,17 +102,19 @@ client.on('message', (message) => {
             message.channel.send("M자 탈모 박치기");
         }
     }
-    if ((args[0] === `${prefix}`) && (args[1] === `블홀공지`)) {
-        blueholdcn.send(`${args[2]}`);
+    if(message.content.startsWith(`${prefix} 블홀공지`)) {
+        let bhkj = message.content.slice(`${prefix} 블홀공지`.length);
+        blueholdcn.send(bhkj);
+        blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+        message.reply('메시지를 전송했습니다.');
     }
     //if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
     //    reinforcejd.send(`${args[2]}`);
     //}
     if(message.content.startsWith(`${prefix} 렌포잡담`)) {
-        let byauthor = message.author.tag;
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
-        reinforcejd.send(`..라고 ${byauthor} (이)가 말하더라`)
+        reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     if (message.content === `테스트`) {
