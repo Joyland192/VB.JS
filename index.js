@@ -218,7 +218,7 @@ client.on('message', (message) => {
         message.channel.send(`경험치를 ${message.author.setex}로 조정했습니다.`);
     }
     if (message.content.startsWith (`${prefix} 닉네임`)) {
-        message.author.nicknames = message.content.slice(`${prefix} 닉네임`.length);
+        message.author.nicknames = message.content.slice(`${prefix} 닉네임 `.length);
         client.user.username = (message.author.nicknames);
         message.channel.send(`닉네임을 ${message.author.nicknames} 으로 설정 했어.`);
         if (message.author.nicknames == `${client.user.username}`) {
