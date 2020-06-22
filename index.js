@@ -205,6 +205,7 @@ client.on('message', (message) => {
             message.channel.send(`축하합니다! 레벨업 하셨습니다!`);
             message.author.exp -= message.author.maxexp;
             message.author.level++;
+            message.author.maxexp = message.author.level*300;
         }
         message.channel.send(`더는 올릴 레벨이 없습니다.`);
     }
