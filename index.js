@@ -197,17 +197,17 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
-    if (message.content.startswith (`${prefix} 닉네임`)) {
+   // if (message.content.startswith (`${prefix} 닉네임`)) {
         //let nicknames = message.content.slice(`${prefix} 닉네임`.length);
         //client.user.username = (nicknames);
-        message.channel.send(`닉네임을 ${nicknames} 으로 설정 했어.`);
-        if (nicknames == `${client.user.username}`) {
-            message.channel.send(`원래 이거였는데?`);
-        }
-        if (nicknames == `바보`) {
+        //message.channel.send(`닉네임을 ${nicknames} 으로 설정 했어.`);
+        //if (nicknames == `${client.user.username}`) {
+            //message.channel.send(`원래 이거였는데?`);
+        //}
+        //if (nicknames == `바보`) {
             message.channel.send(`..디질래?`);
-        }
-    }
+        //}
+    //}
     if (message.channel.id === '541904100607131658') {
         if (message.content.startsWith (`ㅅㅂ`)) {
             message.delete();
