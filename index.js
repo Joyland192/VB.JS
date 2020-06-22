@@ -199,7 +199,7 @@ client.on('message', (message) => {
     }
     if (message.content.startswith (`${prefix} 닉네임`)) {
         let nicknames = message.content.slice(`${prefix} 닉네임`.length);
-        client.user.username = `${nicknames}`;
+        client.user.username = (nicknames);
         message.channel.send(`닉네임을 ${nicknames} 으로 설정 했어.`);
         if (nicknames == `${client.user.username}`) {
             message.channel.send(`원래 이거였는데?`);
