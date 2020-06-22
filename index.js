@@ -205,7 +205,7 @@ client.on('message', (message) => {
             //message.channel.send(`원래 이거였는데?`);
         //}
         //if (nicknames == `바보`) {
-            message.channel.send(`..디질래?`);
+            //message.channel.send(`..디질래?`);
         //}
     //}
     if (message.channel.id === '541904100607131658') {
