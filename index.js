@@ -213,7 +213,7 @@ client.on('message', (message) => {
         message.channel.send(joutube);       
     }
     if (message.content.startswith (`${prefix} 경험치 조정`)) {
-        message.author.setexp = message.content.slice (`${prefix} 경험치 조정`.length);
+        message.author.setexp = args[3];
         message.author.exp = messaeg.author.setexp;
         message.channel.send(`경험치를 ${message.author.setexp}로 조정했습니다.`);
     }
