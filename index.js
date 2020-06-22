@@ -95,6 +95,12 @@ client.on('message', (message) => {
             message.channel.send("M자 탈모 박치기");
         }
     }
+    if (message.content.startsWith (`${prefix} 통계`)) {
+        message.channel.send('https://status.discord.com');
+    }
+    if (message.content.startsWith (`${prefix} 테섭`)) {
+        message.channel.send('https://discord.gg/bRYDfzg');
+    }
     if(message.content.startsWith(`${prefix} 블홀공지`)) {
         let bhkj = message.content.slice(`${prefix} 블홀공지`.length);
         blueholdcn.send(bhkj);
