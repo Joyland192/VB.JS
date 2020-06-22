@@ -203,6 +203,10 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
+    if (message.content.startswith(`${prefix} 경험치 조정`)) {
+        message.author.expset = message.content.slice(`${prefix} 경험치 조정`.length);
+        message.author.exp += message.author.expset;
+    }
    // if (message.content.startswith (`${prefix} 닉네임`)) {
         //let nicknames = message.content.slice(`${prefix} 닉네임`.length);
         //client.user.username = (nicknames);
