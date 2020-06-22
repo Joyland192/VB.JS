@@ -197,8 +197,8 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
-    if ((args[0] === `${prefix}`) && (args[1] === `닉네임`)) {
-        client.user.setUsername(`${args[2]}`);
+    if (message.content.startswith (`${prefix} 닉네임`)) {
+        let nicknames = message.content.slice(`${prefix} 닉네임`.length);
         message.channel.send(`닉네임을 ${args[2]} 으로 설정 했어.`);
         if (args[2] == `${client.user.username}`) {
             message.channel.send(`원래 이거였는데?`)
