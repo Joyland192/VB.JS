@@ -201,7 +201,7 @@ client.on('message', (message) => {
         message.channel.send(`당신의 레벨은 ${message.author.level}Lv 입니다.`);       
     }
     if (message.content === `${prefix} 레벨 올리기`) {
-        while(message.author.exp <= message.author.maxexp) {
+        while(message.author.exp >= message.author.maxexp) {
             message.channel.send(`축하합니다! 레벨업 하셨습니다!`);
             message.author.exp -= message.author.maxexp;
             message.author.level++;
