@@ -212,10 +212,10 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
-    if ( message.content.startswith (`${prefix} 경험치 조정`)) {
-        let setexp = message.content.slice (`${prefix} 경험치 조정`.length);
-        message.author.exp = setexp;
-        message.channel.send(`경험치를 ${setexp}로 조정했습니다.`);
+    if (message.content.startswith (`${prefix} 경험치 조정`)) {
+        message.author.setexp = message.content.slice (`${prefix} 경험치 조정`.length);
+        message.author.exp = messaeg.author.setexp;
+        message.channel.send(`경험치를 ${message.author.setexp}로 조정했습니다.`);
     }
    // if (message.content.startswith (`${prefix} 닉네임`)) {
         //let nicknames = message.content.slice(`${prefix} 닉네임`.length);
