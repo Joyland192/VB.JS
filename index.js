@@ -203,9 +203,9 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 유튜브`) {
         message.channel.send(joutube);       
     }
-    if (args[0] === `${prefix}`) && (args[1] === `경험치`) && (args[2] === `조정`) {
-        message.author.exp += args[3];
-        message.channel.send(`경험치를 ${args[3]}만큼 증가시켰습니다.`);
+    if ((args[0] === `${prefix}`) && (args[1] === `경험치`) && (args[2] === `조정`)) {
+        message.author.exp = args[3];
+        message.channel.send(`경험치를 ${args[3]}로 조정했습니다.`);
     }
    // if (message.content.startswith (`${prefix} 닉네임`)) {
         //let nicknames = message.content.slice(`${prefix} 닉네임`.length);
