@@ -342,7 +342,7 @@ client.on('message', (message) => {
 	message.react('🍊');
 	message.react('🍇');
     }
-    message.author.exp = message.author.exp + 20;
+    message.author.exp += 20;
 });
 
 
