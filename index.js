@@ -152,6 +152,7 @@ client.on('message', (message) => {
         message.channel.send(`${prefix} 레벨 -> 유저의 레벨을 확인합니다.`);
         message.channel.send(`${prefix} 경험치 올리기-> 경험치를 일정량 올립니다.`);
         message.channel.send(`주의! 베타 버전이기 때문에 봇이 재시동될때마다 경험치가 초기화됩니다.`);
+    }
     if (message.content === `${prefix} 지워`) {
         message.author.plsdel = Math.floor(Math.random() * 5) + 1;
         if (message.author.plsdel === 1) {
