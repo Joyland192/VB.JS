@@ -316,13 +316,13 @@ client.on('message', (message) => {
         message.channel.send(`AR의 턴입니다.`);
     }
     if (message.content === `${prefix} 순서 `) {
-        if (message.author.qna = 1) {
+        if (message.author.qna == 1) {
             message.channel.send(`JL의 턴입니다.`);
         }
-        if (message.author.qna = 2) {
+        if (message.author.qna == 2) {
             message.channel.send(`V의 턴입니다.`);
         }
-        if (message.author.qna = 3) {
+        if (message.author.qna == 3) {
             message.channel.send(`AR의 턴입니다.`);
         }
     }
