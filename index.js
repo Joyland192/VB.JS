@@ -213,9 +213,9 @@ client.on('message', (message) => {
         message.channel.send(joutube);       
     }
     if (message.content.startsWith (`${prefix} 경험치 조정`)) {
-        message.author.setexp = args[3];
-        message.author.exp = message.author.setexp;
-        message.channel.send(`경험치를 ${message.author.setexp}로 조정했습니다.`);
+        var setexp = args[3];
+        message.author.exp = setexp;
+        message.channel.send(`경험치를 ${setexp}로 조정했습니다.`);
     }
     if (message.content.startsWith (`${prefix} 닉네임`)) {
         message.author.nicknames = message.content.slice(`${prefix} 닉네임 `.length);
