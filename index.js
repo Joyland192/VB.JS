@@ -182,6 +182,18 @@ client.on('message', (message) => {
     	if (message.content === `${prefix} 안녕`) {
             message.react("😡");       
     	}
+    	if (message.content === `${prefix} 히히`) {
+            message.channel.send("?")    
+    	}
+    	if (message.content === `${prefix} 블홀`) {
+            message.channel.send("바본데 너보단 나음")    
+    	}
+    	if (message.content === `${prefix} ㅇ`) {
+            message.channel.send("?")    
+    	}
+    	if (message.content === `${prefix} 끌게`) {
+            message.channel.send("? ㅅㅂ 잠만")    
+    	}
     }
     if (message.author.id != 414266558974656518) {
     	if (message.content === `${prefix} 사랑해`) {
@@ -207,6 +219,18 @@ client.on('message', (message) => {
     	}
     	if (message.content === `${prefix} 안녕`) {
             message.react("👋");       
+    	}
+    	if (message.content === `${prefix} 히히`) {
+            message.channel.send("히히")    
+    	}
+    	if (message.content === `${prefix} 블홀`) {
+            message.channel.send("바보")    
+    	}
+    	if (message.content === `${prefix} ㅇ`) {
+            message.channel.send("음..?")    
+    	}
+    	if (message.content === `${prefix} 끌게`) {
+            message.channel.send("네? 절 끄실 수 있어요?")    
     	}
     }
     if (message.content === `${prefix} 도움 레벨`) {
