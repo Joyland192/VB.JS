@@ -123,7 +123,7 @@ client.on('message', (message) => {
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
-        let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
+        let rfjd = message.content.slice(`${prefix} 렌포비밀잡담`.length);
         reinforcejd.send(rfjd);
         message.reply('메시지를 전송했습니다.');
     }
