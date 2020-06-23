@@ -276,7 +276,7 @@ client.on('message', (message) => {
     }
     if (message.content.startsWith (`${prefix} 닉네임`)) {
         message.author.nicknames = message.content.slice(`${prefix} 닉네임 `.length);
-        client.user.username = (message.author.nicknames);
+        client.user.setUsername(message.author.nicknames);
         message.channel.send(`닉네임을 ${message.author.nicknames} 으로 설정 했어.`);
         if (message.author.nicknames == `${client.user.username}`) {
             message.channel.send(`원래 이거였는데?`);
