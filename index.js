@@ -122,6 +122,11 @@ client.on('message', (message) => {
         reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
+    if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
+        let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
+        reinforcejd.send(rfjd);
+        message.reply('메시지를 전송했습니다.');
+    }
     if (message.content === `테스트`) {
         message.author.test = Math.floor(Math.random() * 2) + 1;
         if (message.author.test === 1) {
