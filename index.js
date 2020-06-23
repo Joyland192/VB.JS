@@ -157,6 +157,30 @@ client.on('message', (message) => {
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
     }
+    if (message.content === `${prefix} 사랑해`) {
+        message.channel.send("난 아닌데?");       
+    }
+    if (message.content === `${prefix} 닥쳐`) {
+        message.channel.send("ㅇ");       
+    }
+    if (message.content === `${prefix} 비웬`) {
+        message.channel.send("바보");       
+    }
+    if (message.content === `${prefix} 죽어`) {
+        message.channel.send("?");       
+    }
+    if (message.content === `${prefix} 바보`) {
+        message.channel.send("너보단 똑똑해요");       
+    }
+    if (message.content === `${prefix} 야`) {
+        message.channel.send("ㅇ");       
+    }
+    if (message.content === `${prefix} 잘가`) {
+        message.channel.send("어딜가");       
+    }
+    if (message.content === `${prefix} 안녕`) {
+        message.react("👋");       
+    }
     if (message.content === `${prefix} 도움 레벨`) {
         message.channel.send(`${prefix} 경험치 설정 -> 경험치를 0으로 설정합니다. **이 작업을 수행하지 않으면 경험치가 오르지 않습니다.**`);
         message.channel.send(`${prefix} 경험치 -> 보유 경험치를 확인합니다.`);
