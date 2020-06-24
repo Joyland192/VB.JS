@@ -201,6 +201,9 @@ client.on('message', (message) => {
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
     }
+    if (message.content === `${prefix} 변수 테스트`) {
+        message.channel.send(atest);       
+    }
     if (message.author.id == 414266558974656518) {
     	if (message.content === `${prefix} 사랑해`) {
     	    message.channel.send("난 아닌데?");       
