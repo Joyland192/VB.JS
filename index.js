@@ -1,5 +1,4 @@
 const { prefix } = require('./Config.json'); //prefix, token을 불러옴
-const { atest } = require('./test.json');
 //const prefix = "++"; //prefix, token을 불러옴
 const token = process.env.token;
 const Discord = require(`discord.js`); // discord.js를 불러옴
@@ -200,9 +199,6 @@ client.on('message', (message) => {
     }
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
-    }
-    if (message.content === `${prefix} 변수 테스트`) {
-        message.channel.send(atest);       
     }
     if (message.author.id == 414266558974656518) {
     	if (message.content === `${prefix} 사랑해`) {
