@@ -1,4 +1,5 @@
 const { prefix } = require('./Config.json'); //prefix, token을 불러옴
+const { atest } = require('./test.json');
 //const prefix = "++"; //prefix, token을 불러옴
 const token = process.env.token;
 const Discord = require(`discord.js`); // discord.js를 불러옴
