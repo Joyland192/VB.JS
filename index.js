@@ -107,13 +107,23 @@ client.on('message', (message) => {
     if(message.content.startsWith(`${prefix} 블홀공지`)) {
         let bhkj = message.content.slice(`${prefix} 블홀공지`.length);
         blueholdcn.send(bhkj);
-        blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+	if (message.author.id = 414266558974656518) {
+		blueholdcn.send('..라고 개발자가 말하라 시켰어');
+	}
+	if (message.author.id != 414266558974656518) {
+        	blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
+	}
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 나무채팅`)) {
         let nmtt = message.content.slice(`${prefix} 나무채팅`.length);
         namutest.send(nmtt);
-        namutest.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+	if (message.author.id = 414266558974656518) {
+		namutest.send('..라고 개발자가 말하라 시켰어');
+	}
+	if (message.author.id != 414266558974656518) {
+        	namutest.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
+	}
         message.reply('메시지를 전송했습니다.');
     }
     //if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
@@ -122,7 +132,12 @@ client.on('message', (message) => {
     if(message.content.startsWith(`${prefix} 렌포잡담`)) {
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
-        reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+	if (message.author.id = 414266558974656518) {
+		reinforcejd.send('..라고 개발자가 말하라 시켰어');
+	}
+	if (message.author.id != 414266558974656518) {
+        	reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
+	}
         message.reply('메시지를 전송했습니다.');
     }
     if (message.content.startsWith(`${prefix} 개발자 문의`)) {
@@ -134,7 +149,12 @@ client.on('message', (message) => {
     if (message.content.startsWith(`${prefix} 오이`)) {
         let oodm = message.content.slice(`${prefix} 오이`.length);
         kwriterid.send(oodm);
-        kwriterid.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+	if (message.author.id = 414266558974656518) {
+		kwriterid.send('..라고 개발자가 말하라 시켰어');
+	}
+	if (message.author.id != 414266558974656518) {
+        	kwriterid.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
+	}
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
@@ -259,7 +279,7 @@ client.on('message', (message) => {
         message.author.plsdel = Math.floor(Math.random() * 5) + 1;
         if (message.author.plsdel === 1) {
             message.channel.send("시러");
-        }
+        }	
         if (message.author.plsdel === 2) {
             message.delete();
         }
