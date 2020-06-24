@@ -33,13 +33,7 @@ client.once('ready', () => {
 	console.log("Bot Login.");
 	const loginlog = client.channels.cache.get('724231205570215946');
 	loginlog.send(`봇 로그인.`);
-	client.user.setPresence({
-        	status: "idle",  //You can show online, idle....
-        	game: {
-            		name: `${prefix} 도움 레벨 을 입력해보세요.`,  //The message shown
-            		type: "STREAMING" //PLAYING: WATCHING: LISTENING: STREAMING:
-        	}
-    	});
+	client.user.setActivity(`${prefix} 도움 레벨을 입력해보세요.                                `);
 });
 client.on('message', ( message ) => {
     if(message.channel.type === "dm" ) { 
