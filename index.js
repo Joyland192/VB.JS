@@ -30,10 +30,9 @@ const joutube = new Discord.MessageEmbed()
     .setFooter(`VB`, 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png');
 //임베드 함수 생성
 client.once('ready', () => {
-	console.log("Bot Login.");
-	const loginlog = client.channels.cache.get('724231205570215946');
-	loginlog.send(`봇 로그인.`);
-	client.user.setActivity(`${prefix} 도움 레벨을 입력해보세요.                                `);
+  console.log("Bot Login.");
+  const loginlog = client.channels.cache.get('724231205570215946');
+  loginlog.send(`봇 로그인.`);
 });
 client.on('message', ( message ) => {
     if(message.channel.type === "dm" ) { 
@@ -69,8 +68,6 @@ client.on('message', ( message ) => {
     }
 });
 client.on('message', (message) => {
-    const kwriterid = client.users.cache.get('282831530286645258');
-    const developerid = client.users.cache.get('414266558974656518');
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
@@ -107,23 +104,13 @@ client.on('message', (message) => {
     if(message.content.startsWith(`${prefix} 블홀공지`)) {
         let bhkj = message.content.slice(`${prefix} 블홀공지`.length);
         blueholdcn.send(bhkj);
-	if (message.author.id = 414266558974656518) {
-		blueholdcn.send('..라고 개발자가 말하라 시켰어');
-	}
-	if (message.author.id != 414266558974656518) {
-        	blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
-	}
+        blueholdcn.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 나무채팅`)) {
         let nmtt = message.content.slice(`${prefix} 나무채팅`.length);
         namutest.send(nmtt);
-	if (message.author.id = 414266558974656518) {
-		namutest.send('..라고 개발자가 말하라 시켰어');
-	}
-	if (message.author.id != 414266558974656518) {
-        	namutest.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
-	}
+        namutest.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     //if ((args[0] === `${prefix}`) && (args[1] === `렌포잡담`)) {
@@ -132,29 +119,7 @@ client.on('message', (message) => {
     if(message.content.startsWith(`${prefix} 렌포잡담`)) {
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
-	if (message.author.id = 414266558974656518) {
-		reinforcejd.send('..라고 개발자가 말하라 시켰어');
-	}
-	if (message.author.id != 414266558974656518) {
-        	reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
-	}
-        message.reply('메시지를 전송했습니다.');
-    }
-    if (message.content.startsWith(`${prefix} 개발자 문의`)) {
-        let dvdm = message.content.slice(`${prefix} 개발자 문의`.length);
-        developerid.send(dvdm);
-        developerid.send(`-${message.author.tag}-`)
-        message.reply('메시지를 전송했습니다.');
-    }
-    if (message.content.startsWith(`${prefix} 오이`)) {
-        let oodm = message.content.slice(`${prefix} 오이`.length);
-        kwriterid.send(oodm);
-	if (message.author.id = 414266558974656518) {
-		kwriterid.send('..라고 개발자가 말하라 시켰어');
-	}
-	if (message.author.id != 414266558974656518) {
-        	kwriterid.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`);
-	}
+        reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
@@ -191,10 +156,6 @@ client.on('message', (message) => {
     }
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
-    }
-    if (message.content === "재시작") {
-        message.channel.send("클라이언트를 재시작합니다.");
-        process.exit();
     }
     if (message.author.id == 414266558974656518) {
     	if (message.content === `${prefix} 사랑해`) {
@@ -272,6 +233,10 @@ client.on('message', (message) => {
             message.channel.send("네? 절 끄실 수 있어요?")    
     	}
     }
+    if (message.content === `${prefix} 재시작`) {
+        message.channel.send("클라이언트를 재시작합니다.");
+        process.exit();
+    }
     if (message.content === `${prefix} 도움 레벨`) {
         message.channel.send(`${prefix} 경험치 설정 -> 경험치를 0으로 설정합니다. **이 작업을 수행하지 않으면 경험치가 오르지 않습니다.**`);
         message.channel.send(`${prefix} 경험치 -> 보유 경험치를 확인합니다.`);
@@ -283,7 +248,7 @@ client.on('message', (message) => {
         message.author.plsdel = Math.floor(Math.random() * 5) + 1;
         if (message.author.plsdel === 1) {
             message.channel.send("시러");
-        }	
+        }
         if (message.author.plsdel === 2) {
             message.delete();
         }
@@ -403,10 +368,7 @@ client.on('message', (message) => {
         message.channel.send(`야 ${message.author.tag}.. 왜 울고있는거야..?`).then(() => message.channel.send ('..소난다..'));
     }
     if (message.content === `${prefix} 평가`) {
-        message.channel.send('VB의 기능에 대해 평가해주세요.').then(sentMessage => {
-		sentMessage.react('👍');
-		sentMessage.react('👎');
-    	});
+        message.react('👍').then(() => message.react('👎').then(() => message.channel.send(`VB의 기능에 대해 평가해주세요.`)));
     }
     if (message.content === `${prefix} 재배맨!`) {
         message.channel.send(`무 무슨`);
