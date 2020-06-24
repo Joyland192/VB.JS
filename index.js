@@ -98,6 +98,15 @@ client.on('message', (message) => {
             message.channel.send("M자 탈모 박치기");
         }
     }
+    if (message.content === `${prefix} 재시작`) {
+        if ((message.author.id = 414266558974656518) || (message.author.id = 282831530286645258)) {
+            message.channel.send("클라이언트를 재시작합니다.");
+            process.exit();
+        }
+        if ((message.author.id != 414266558974656518) && (message.author.id != 282831530286645258)) {
+            message.channel.send("관리자만 사용할 수 있는 기능입니다.");
+        }
+    }
     if (message.content.startsWith (`${prefix} 통계`)) {
         message.channel.send('https://status.discord.com');
     }
