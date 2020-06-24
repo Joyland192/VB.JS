@@ -69,6 +69,8 @@ client.on('message', ( message ) => {
     }
 });
 client.on('message', (message) => {
+    const kwriterid = client.users.cache.get('282831530286645258');
+    const developerid = client.users.cache.get('414266558974656518');
     const args = message.content.split(" ");
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
@@ -121,6 +123,18 @@ client.on('message', (message) => {
         let rfjd = message.content.slice(`${prefix} 렌포잡담`.length);
         reinforcejd.send(rfjd);
         reinforcejd.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
+        message.reply('메시지를 전송했습니다.');
+    }
+    if (message.content.startsWith(`${prefix} 개발자 문의`)) {
+        let dvdm = message.content.slice(`${prefix} 개발자 문의`.length);
+        developerid.send(dvdm);
+        developerid.send(`-${message.author.tag}-`)
+        message.reply('메시지를 전송했습니다.');
+    }
+    if (message.content.startsWith(`${prefix} 오이`)) {
+        let oodm = message.content.slice(`${prefix} 오이`.length);
+        kwriterid.send(oodm);
+        kwriterid.send(`..라고 ${message.author.tag} (이)가 말하라 시켰어`)
         message.reply('메시지를 전송했습니다.');
     }
     if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
