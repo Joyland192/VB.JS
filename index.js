@@ -192,6 +192,10 @@ client.on('message', (message) => {
     if (message.content === "몸 어때") {
         message.channel.send("갠찮아");       
     }
+    if (message.content === "재시작") {
+        message.channel.send("클라이언트를 재시작합니다.");
+        process.exit();
+    }
     if (message.author.id == 414266558974656518) {
     	if (message.content === `${prefix} 사랑해`) {
     	    message.channel.send("난 아닌데?");       
