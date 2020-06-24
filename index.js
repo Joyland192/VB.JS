@@ -30,9 +30,16 @@ const joutube = new Discord.MessageEmbed()
     .setFooter(`VB`, 'https://cdn.discordapp.com/attachments/719852428777750590/719877042304450620/download20200502163021.png');
 //임베드 함수 생성
 client.once('ready', () => {
-  console.log("Bot Login.");
-  const loginlog = client.channels.cache.get('724231205570215946');
-  loginlog.send(`봇 로그인.`);
+	console.log("Bot Login.");
+	const loginlog = client.channels.cache.get('724231205570215946');
+	loginlog.send(`봇 로그인.`);
+	client.user.setPresence({
+        	status: "idle",  //You can show online, idle....
+        	game: {
+            		name: `${prefix} 도움 레벨 을 입력해보세요.`,  //The message shown
+            		type: "STREAMING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        	}
+    	});
 });
 client.on('message', ( message ) => {
     if(message.channel.type === "dm" ) { 
