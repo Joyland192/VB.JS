@@ -337,7 +337,7 @@ client.on('message', (message) => {
         message.channel.send(joutube);       
     }
     if ((message.content.startsWith (`${prefix} 경험치 조정`)) && ((message.author.id = 414266558974656518) || (message.author.id = 282831530286645258))) {
-        let setexp = args[3];
+        let setexp = message.content.slice(`${prefix} 경험치 조정`.length);
         message.author.exp = setexp
         message.channel.send(`경험치를 ${setexp}로 조정했습니다.`);
     }
