@@ -280,7 +280,7 @@ client.on('message', (message) => {
         message.channel.send(`${prefix} 경험치 설정 -> 경험치를 0으로 설정합니다. **이 작업을 수행하지 않으면 경험치가 오르지 않습니다.**`);
         message.channel.send(`${prefix} 경험치 -> 보유 경험치를 확인합니다.`);
         message.channel.send(`${prefix} 레벨 -> 유저의 레벨을 확인합니다.`);
-        message.channel.send(`~~${prefix} 경험치 올리기-> 경험치를 일정량 올립니다.~~ **`사용불가`**`);
+        message.channel.send(`~~${prefix} 경험치 올리기-> 경험치를 일정량 올립니다.~~ **사용불가**`);
         message.channel.send(`주의! 베타 버전이기 때문에 봇이 재시동될때마다 경험치가 초기화됩니다.`);
     }
     if (message.content === `${prefix} 지워`) {
