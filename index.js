@@ -101,8 +101,7 @@ client.on('message', (message) => {
     if (message.content === `${prefix} 재시작`) {
         if ((message.author.id = 414266558974656518) || (message.author.id = 282831530286645258)) {
             message.channel.send("클라이언트를 재시작합니다.").then(() => process.exit());
-        }
-        if ((message.author.id != 414266558974656518) && (message.author.id != 282831530286645258)) {
+        } else {
             message.channel.send("관리자만 사용할 수 있는 기능입니다.");
         }
     }
@@ -342,8 +341,7 @@ client.on('message', (message) => {
             let setexp = args[3];
             message.author.exp = setexp
             message.channel.send(`경험치를 ${setexp}로 조정했습니다.`);
-        }
-        else {
+        } else {
             message.channel.send("관리자만 사용할 수 있는 기능입니다.");
         }
     }
