@@ -343,7 +343,7 @@ client.on('message', (message) => {
             message.author.exp = setexp
             message.channel.send(`경험치를 ${setexp}로 조정했습니다.`);
         }
-        if ((message.author.id != 414266558974656518) && (message.author.id != 282831530286645258)) {
+        else {
             message.channel.send("관리자만 사용할 수 있는 기능입니다.");
         }
     }
