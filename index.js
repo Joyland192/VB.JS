@@ -178,6 +178,11 @@ client.on('message', (message) => {
             message.channel.send("잘 되는데?");
         }
     }
+    if (message.content.startsWith(`${prefix} 메시지`)) {
+        const sendmsg = client.users.cache.get(args[2]);
+        sendmsg.send(args[3]);
+        message.reply('메시지를 전송했습니다.');
+    }
     if (message.content === `${prefix} 반응 달아`) {
         message.author.reac = Math.floor(Math.random() * 3) + 1;
         if (message.author.reac === 1) {
