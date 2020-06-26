@@ -377,19 +377,19 @@ client.on('message', (message) => {
         message.channel.send(`**${message.guild.name}**`)
     }
     if (message.content.startsWith (`ㅅㅂ`)) {
-        message.channel.send('욕은 나빠 >:(');
+        message.channel.send('욕설은 자제해주세요.');
     }
     if (message.content.startsWith (`시발`)) {
-        message.channel.send('욕은 나빠 >:(');
+        message.channel.send('욕설은 자제해주세요.');
     }
     if (message.content.startsWith (`씨발`)) {
-        message.channel.send('욕은 나빠 >:(');
+        message.channel.send('욕설은 자제해주세요.');
     }
     if (message.content.startsWith (`ㅆㅂ`)) {
-        message.channel.send('욕은 나빠 >:(');
+        message.channel.send('욕설은 자제해주세요.');
     }
     if (message.content.startsWith (`시벌`)) {
-        message.channel.send('욕은 나빠 >:(');
+        message.channel.send('욕설은 자제해주세요.');
     }
     if (message.content.startsWith (`소환`)) {
         message.react('🤔');
