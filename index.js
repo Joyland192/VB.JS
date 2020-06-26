@@ -179,7 +179,7 @@ client.on('message', (message) => {
         }
     }
     if (message.content.startsWith(`${prefix} 메시지`)) {
-        const sendmsg = client.users.cache.get(args[2]);
+        let sendmsg = client.users.cache.get(args[2]);
         sendmsg.send(args[3]);
         message.reply('메시지를 전송했습니다.');
     }
