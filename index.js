@@ -72,6 +72,7 @@ client.on('message', (message) => {
     const kwriterid = client.users.cache.get('282831530286645258');
     const developerid = client.users.cache.get('414266558974656518');
     const args = message.content.split(" ");
+    const sharpct = client.channels.cache.get('720124444236054545');
     const blueholdcn = client.channels.cache.get('721252326249070652');
     const reinforcejd = client.channels.cache.get('541904100607131658');
     const namutest = client.channels.cache.get('697389133361971315');
@@ -167,6 +168,11 @@ client.on('message', (message) => {
     if(message.content.startsWith(`${prefix} 렌포비밀잡담`)) {
         let rfjd = message.content.slice(`${prefix} 렌포비밀잡담`.length);
         reinforcejd.send(rfjd);
+        message.reply('메시지를 전송했습니다.');
+    }
+    if(message.content.startsWith(`${prefix} 샤프채팅`)) {
+        let spct = message.content.slice(`${prefix} 샤프채팅`.length);
+        sharpct.send(spct);
         message.reply('메시지를 전송했습니다.');
     }
     if (message.content === `테스트`) {
